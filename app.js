@@ -33,16 +33,19 @@ function addPicture(url) {
     $('.add-picture-url').val('');
     imageArray[imageCount] = url;
     imageCount++;
-
 }
+
+var count = 0;
 
 //Slideshow function:
 function slideshow(){
-    for (image in imageArray){
-        $('.slideshow').src == imageArray[image];
+    if(count<=imageCount) {
+        $('.slideshow').src == imageArray[count];
+        count++;
+    } else {
+        count = 0;
     }
-    //count=0;
-    //setTimeout("slideshow()",2500);
+    setTimeout("slideshow()",2500);
 }
 
 slideshow();

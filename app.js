@@ -6,6 +6,8 @@ $(document).ready(function(e) {
 function changeSectionClickHandler(e) {
     var section = e.target.getAttribute('data-target')
     changeSection(section);
+    if (e.target.getAttribute('data-target') == "slideshow")
+        slideshow();
 }
 
 function changeSection(sectionName) {
@@ -13,39 +15,34 @@ function changeSection(sectionName) {
     $('.' + sectionName).addClass('active');
 }
 
+
+
 function addPictureClickHandler(e) {
     var url = $('.add-picture-url').val();
     addPicture(url);
 }
+
+
 //Antall bilder:
 var imageCount = 1;
 var imageArray = new Array();
-imageArray[0] = new Image();
-imageArray[0].src = document.getElementById('defaultImage').src;
 
 function addPicture(url) {
     var html = '<img src="' + url +'" />';
     $('section.pictures img:last').after(html);
     $('.add-picture-url').val('');
-    imageArray[imageCount] = new Image();
-    imageArray[imageCount].src = url;
+    imageArray[imageCount] = url;
     imageCount++;
 
-} 
-//Variable for slideshow:
-var count = 0;
-var error = "";
+}
 
 //Slideshow function:
 function slideshow(){
-    if(document.getElementById('slide').src == "")
-        return;
-    document.getElementById('slide').src = imageArray[count].src;
-    if(count<2)
-        count++;
-    else
-        step=0;
-        setTimeout("slideshow()",2500);
+    for (image in imageArray){
+        $('.slideshow').src == imageArray[image];
+    }
+    //count=0;
+    //setTimeout("slideshow()",2500);
 }
 
 slideshow();

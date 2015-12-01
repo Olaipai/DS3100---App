@@ -23,7 +23,8 @@ body {
 .section {
     display: none;
     width: 98%;
-    margin: 1%;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px;
     border-style: groove;
     border-color: #d9d9d9;
@@ -33,10 +34,34 @@ body {
     vertical-align: baseline;
     background: rgba(39, 40, 51, 0.965);
 	box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+	position: relative;
+	
 }
 
 .section.active {
     display: block;
+}
+
+h1,p,h4 {
+	text-align: center;
+	color: white;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.add-picture-url {
+display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.add-picture-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 nav {

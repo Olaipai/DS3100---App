@@ -1,4 +1,5 @@
 $(document).ready(function(e) {
+    console.log( "ready!" );
     $('nav button').on('click', changeSectionClickHandler);
     $('.add-picture-button').on('click', addPictureClickHandler);
 });

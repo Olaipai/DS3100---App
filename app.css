@@ -1,14 +1,65 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+
 body {
     padding: 0;
     margin: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "roboto";
+    vertical-align: baseline;
+    background-attachment: fixed;
+    background-color: #272833;
+    background-position: center center;
+    background-size: cover;
+	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+	position: relative;
+	min-height: 100vh;
+    background-image: url(pictures/banner.jpg);
+    display: block;
+    z-index: 10;
 }
 
+body:before {
+	background-image: url(pictures/overlay.png);
+	opacity: 0.3;
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+		
+}
+
+	
 .section {
     display: none;
+    width: 98%;
+    margin: 1%;
+    border: 2px;
+    border-style: groove;
+    border-color: #d9d9d9;
+    font: inherit;
+    font-size: 100%;
+    font-color: white;
+    vertical-align: baseline;
+    background: rgba(39, 40, 51, 0.965);
+	box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 }
 
 .section.active {
     display: block;
+}
+
+nav {
+	display: block;
+	color: white;
+	position: relative;
+	margin-left: 1%;
+	padding: 0;
+	border: 0;
 }
 
 nav:after {
@@ -17,15 +68,179 @@ nav:after {
     display: block;
     visibility: none;
     clear: both;
+    position: inherit;
 }
 
 nav button {
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    background: 0;
+    background: rgba(39, 40, 51, 0.965);
+		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
     height: 40px;
     float: left;
     width: 33%;
     color: inherit;
+    position: inherit;
+    font: inherit;
 }
+
+*, *:before, *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.container.\31 25\25 {
+		width: 100%;
+		max-width: 87.5em;
+		min-width: 70em;
+	}
+
+	.container.\37 5\25 {
+		width: 52.5em;
+	}
+
+	.container.\35 0\25 {
+		width: 35em;
+	}
+
+	.container.\32 5\25 {
+		width: 17.5em;
+	}
+
+	.container {
+		width: 70em;
+	}
+
+	@media screen and (max-width: 1680px) {
+
+		.container.\31 25\25 {
+			width: 100%;
+			max-width: 87.5em;
+			min-width: 70em;
+		}
+
+		.container.\37 5\25 {
+			width: 52.5em;
+		}
+
+		.container.\35 0\25 {
+			width: 35em;
+		}
+
+		.container.\32 5\25 {
+			width: 17.5em;
+		}
+
+		.container {
+			width: 70em;
+		}
+
+	}
+
+	@media screen and (max-width: 1280px) {
+
+		.container.\31 25\25 {
+			width: 100%;
+			max-width: 112.5%;
+			min-width: 90%;
+		}
+
+		.container.\37 5\25 {
+			width: 67.5%;
+		}
+
+		.container.\35 0\25 {
+			width: 45%;
+		}
+
+		.container.\32 5\25 {
+			width: 22.5%;
+		}
+
+		.container {
+			width: 90%;
+		}
+
+}
+
+	@media screen and (max-width: 980px) {
+
+		.container.\31 25\25 {
+			width: 100%;
+			max-width: 125%;
+			min-width: 100%;
+		}
+
+		.container.\37 5\25 {
+			width: 75%;
+		}
+
+		.container.\35 0\25 {
+			width: 50%;
+		}
+
+		.container.\32 5\25 {
+			width: 25%;
+		}
+
+		.container {
+			width: 100% !important;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.container.\31 25\25 {
+			width: 100%;
+			max-width: 125%;
+			min-width: 100%;
+		}
+
+		.container.\37 5\25 {
+			width: 75%;
+		}
+
+		.container.\35 0\25 {
+			width: 50%;
+		}
+
+		.container.\32 5\25 {
+			width: 25%;
+		}
+
+		.container {
+			width: 100% !important;
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.container.\31 25\25 {
+			width: 100%;
+			max-width: 125%;
+			min-width: 100%;
+		}
+
+		.container.\37 5\25 {
+			width: 75%;
+		}
+
+		.container.\35 0\25 {
+			width: 50%;
+		}
+
+		.container.\32 5\25 {
+			width: 25%;
+		}
+
+		.container {
+			width: 100% !important;
+		}
+
+	}

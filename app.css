@@ -51,7 +51,34 @@ img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	max-height: 50vh;
+	max-width: 50vh;
+	min-width: 50vh;
+	max-width: 50vh;
 }
+
+/*@media screen and (orientation:portrait) {
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-height: 50vh;
+		max-width: 50vh;
+		min-width: 50vh;
+		max-width: 50vh;
+	}
+}
+
+@media screen and (orientation:landscape) {
+	img {
+		float:left;
+		display: block;
+		max-height: 60vh;
+		max-width: 60vh;
+		min-width: 60vh;
+		max-width: 60vh;
+	}
+}*/
 .add-picture-url {
 display: block;
 	margin-left: auto;
@@ -71,6 +98,8 @@ nav {
 	margin-left: 1%;
 	padding: 0;
 	border: 0;
+	min-height: 10vh;
+	max-height: 15vh;
 }
 
 nav:after {
@@ -102,6 +131,8 @@ nav button {
 	.container {
 		margin-left: auto;
 		margin-right: auto;
+		min-height: 75vh;
+		max-height: 90vh;
 	}
 
 	.container.\31 25\25 {
@@ -176,7 +207,7 @@ nav button {
 			width: 90%;
 		}
 
-}
+	}
 
 	@media screen and (max-width: 980px) {
 

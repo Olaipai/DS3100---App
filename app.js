@@ -7,8 +7,7 @@ $(document).ready(function(e) {
  
         loadImage();
         slideshow();
-        
->>>>>>> Stashed changes
+       
 });
  
 function changeSectionClickHandler(e) {
@@ -53,27 +52,8 @@ function slideshow(){
     document.getElementById('slide').src = imageArray[count].src;
     setTimeout("slideshow()",2500);
 }
-<<<<<<< Updated upstream
-
-var numberOfImages = localStorage.length;
-
-function load(){
-    for(var i = 1; i < numberOfImages; i++){
-        var inputStored = localStorage.key(i).value;
-        addPicture(inputStored);
-    }
-}
-function save(){
-    var fieldValue = document.getElementById('add-picture-url').value;
-    if(numberOfImages = 0){
-        localStorage.setItem(numberOfImages+1, fieldValue);
-        numberOfImages+= 1;}
-    else
-        localStorage.setItem(numberOfImages, fieldValue);
-        numberOfImages+= 1;
-=======
  
-
+ 
  
 function loadImage(){
     var i = 0;
@@ -86,17 +66,4 @@ function save(){
     for(i = 0; i < imageArray.length; i++){
         localStorage.setItem(i, imageArray[i].src);
     }
-
-
-    /*  NICOLAI SIN KODE
-    var fieldValue = document.getElementById('add-picture-url').value;
-    if(numberOfImages = 0){
-        localStorage.setItem(numberOfImages+1, fieldValue);
-        numberOfImages+= 1;
-    }
-    else{
-        localStorage.setItem(numberOfImages, fieldValue);
-        numberOfImages+= 1;
-    }*/
->>>>>>> Stashed changes
 }

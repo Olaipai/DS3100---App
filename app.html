@@ -7,20 +7,20 @@
     <meta charset="UTF-8"/>
 </head>
 <body>
-
+ 
 <nav id="nav">
     <button data-target="main">Forside</button>
     <button data-target="pictures">Legg til bilder</button>
     <button data-target="slideshow">Slideshow</button>
 </nav>
-
+ 
 <section class="main section active">
     <div class="container">
         <header>
             <h1>Teknisk innlevering DS3800</h1>
-
+ 
             <h4>Gruppemedlemmer:</h4>
-
+ 
             <p>
                 Nicolai Berg </br>
                 Joakim Lund </br>
@@ -31,17 +31,16 @@
         </header>
     </div>
 </section>
-
+ 
 <section class="pictures section">
     <h1>Bilder</h1>
     <img id="defaultImage" src="./pictures/default.jpg" />
     <br>
-    <input class="add-picture-url" type="text" />
-    <button class="add-picture-button">Legg til</button>
+    <input class="add-picture-url" id="add-picture-url" type="text" />
     <br>
+    <button class="add-picture-button" onclick="save()">Legg til</button>
 </section>
-
-<!-- Her legger du til en tredje seksjon -->
+ 
 <section class="slideshow section">
     <h1>Slideshow</h1>
     <img class="slideshow" src="" id="slide"  border="3"/>

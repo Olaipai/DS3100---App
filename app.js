@@ -1,12 +1,11 @@
 $(document).ready(function(e) {
     $('nav button').on('click', changeSectionClickHandler);
     $('.add-picture-button').on('click', addPictureClickHandler);
- 
-    //KODE FLYTTET INN HER
-    imageArray[0] = new Image();
-    imageArray[0].src = document.getElementById('defaultImage').src;
- 
-    slideshow();
+        
+        imageArray[0] = new Image();
+        imageArray[0].src = document.getElementById('defaultImage').src;
+
+        slideshow();
 });
  
 function changeSectionClickHandler(e) {
@@ -25,24 +24,19 @@ function addPictureClickHandler(e) {
 }
  
 //Antall bilder:
-//var imageCount = 1;
 var imageArray = new Array();
  
 function addPicture(url) {
-    var html = '<img src="' + url +'" />';
+    var html = '<img src="' + url +'" height=320 width=320/>';
     $('section.pictures img:last').after(html);
     $('.add-picture-url').val('');
  
-    //ENDRET KODE HER
     imageArray.push(new Image());
     imageArray[imageArray.length - 1].src = url;
- 
-//    imageCount++;
 }
  
 //Variable for slideshow:
 var count = -1;
-//var error = "";
  
 //Slideshow function:
 function slideshow(){
@@ -58,19 +52,18 @@ function slideshow(){
 
 var numberOfImages = localStorage.length;
 
-function load() {
-    for(var i = 1; i < numberOfImages; i++) {
+function load(){
+    for(var i = 1; i < numberOfImages; i++){
         var inputStored = localStorage.key(i).value;
         addPicture(inputStored);
     }
 }
-function save() {
+function save(){
     var fieldValue = document.getElementById('add-picture-url').value;
-    if(numberOfImages = 0) {
+    if(numberOfImages = 0){
         localStorage.setItem(numberOfImages+1, fieldValue);
-        numberOfImages += 1;}
+        numberOfImages+= 1;}
     else
         localStorage.setItem(numberOfImages, fieldValue);
-        numberOfImages+=1;
-    }
+        numberOfImages+= 1;
 }

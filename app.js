@@ -1,11 +1,14 @@
 $(document).ready(function(e) {
     $('nav button').on('click', changeSectionClickHandler);
     $('.add-picture-button').on('click', addPictureClickHandler);
-        
+       
         imageArray[0] = new Image();
         imageArray[0].src = document.getElementById('defaultImage').src;
-
+ 
+        loadImage();
         slideshow();
+        
+>>>>>>> Stashed changes
 });
  
 function changeSectionClickHandler(e) {
@@ -21,6 +24,7 @@ function changeSection(sectionName) {
 function addPictureClickHandler(e) {
     var url = $('.add-picture-url').val();
     addPicture(url);
+    save();
 }
  
 //Antall bilder:
@@ -49,6 +53,7 @@ function slideshow(){
     document.getElementById('slide').src = imageArray[count].src;
     setTimeout("slideshow()",2500);
 }
+<<<<<<< Updated upstream
 
 var numberOfImages = localStorage.length;
 
@@ -66,4 +71,32 @@ function save(){
     else
         localStorage.setItem(numberOfImages, fieldValue);
         numberOfImages+= 1;
+=======
+ 
+
+ 
+function loadImage(){
+    var i = 0;
+    for(var i = 1; i < localStorage.length; i++){
+        addPicture(localStorage.getItem(i));
+    }
+}
+function save(){
+    var i = 0;
+    for(i = 0; i < imageArray.length; i++){
+        localStorage.setItem(i, imageArray[i].src);
+    }
+
+
+    /*  NICOLAI SIN KODE
+    var fieldValue = document.getElementById('add-picture-url').value;
+    if(numberOfImages = 0){
+        localStorage.setItem(numberOfImages+1, fieldValue);
+        numberOfImages+= 1;
+    }
+    else{
+        localStorage.setItem(numberOfImages, fieldValue);
+        numberOfImages+= 1;
+    }*/
+>>>>>>> Stashed changes
 }
